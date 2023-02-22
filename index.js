@@ -121,7 +121,7 @@ const saveImage = () => {
   );
   const link = document.createElement("a");
   link.download = "image.jpg";
-  link.href = canvas.toDataURL();
+  link.href = canvas.toDataURL().replace("image/octet-stream");
   link.click();
   //   document.body.appendChild(canvas);
 };
